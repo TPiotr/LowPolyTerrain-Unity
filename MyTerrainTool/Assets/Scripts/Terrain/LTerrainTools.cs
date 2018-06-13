@@ -40,6 +40,15 @@ public class LTerrainTools : MonoBehaviour {
     private int TICK_AFTER = 20;
     
     public void Tick () {
+
+        if (terrain == null)
+        {
+            terrain = GetComponent<LTerrain>();
+
+            if(terrain == null)
+                Debug.LogError("LTerrain instance not found");
+        }
+
         if (Environment.TickCount - last_tick_time > TICK_AFTER)
         {
             Vector3 point = LastRaycastHit.point;

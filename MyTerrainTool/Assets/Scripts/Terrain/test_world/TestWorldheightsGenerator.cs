@@ -7,7 +7,7 @@ public class TestWorldheightsGenerator : MonoBehaviour, HeightsGenerator {
     private float maxx_height = -100;
     private float min_height = 100;
 
-    public Color min_color, max_color;
+    public Color min_color = Color.red, max_color = Color.red;
 
     public float heightScale = 10f;
     public float scale = .1f;
